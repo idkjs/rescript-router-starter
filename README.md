@@ -1,4 +1,5 @@
-# ReScript React Starter Kit
+# ReScript Form Starter
+
 
 > An opinionated starter kit for ReScript React
 
@@ -145,3 +146,7 @@ Bundles the project in `build`
 ### yarn test
 
 Runs the test suite
+
+## Notes
+
+Form based on https://dev.to/sophiabrandt/learning-reasonreact-step-by-step-part-1-15ih
