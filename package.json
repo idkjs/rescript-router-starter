@@ -19,6 +19,7 @@
     "test": "retest --with-dom test/*_test.mjs"
   },
   "devDependencies": {
+    "bs-stdlib-shims": "idkjs/bs-stdlib-shims",
     "chalk": "^4.1.2",
     "copy-webpack-plugin": "^9.0.1",
     "etag": "^1.8.1",

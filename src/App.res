@@ -6,7 +6,7 @@ html {
   font-family: sans-serif;
 }
 body {
-  padding: 0; 
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -31,14 +31,22 @@ module App = {
 
     <>
       <Head
-        defaultTitle="ReScript React Starter Kit" titleTemplate="%s - ReScript React Starter Kit"
+        defaultTitle="ReScript Form" titleTemplate="%s - ReScript Form"
       />
-      <Header />
-      {switch url.path {
-      | list{} => <Home />
-      | list{"robots"} => <Robots />
-      | _ => <ErrorPage text="Not found" />
-      }}
+      // <Header />
+      // {switch url.path {
+      // | list{} => <Home />
+      // | list{"robots"} => <Robots />
+      // | _ => <ErrorPage text="Not found" />
+      // }}
+        <MainLayout>
+      {switch (url.path) {
+       | list{"login"} => <Form formType=FormTypes.Login />
+       | list{"register"} => <Form formType=FormTypes.Register />
+       | list{} => <Main />
+        | _ => <ErrorPage text="Not found" />
+       }}
+    </MainLayout>
       <Footer />
     </>
   }

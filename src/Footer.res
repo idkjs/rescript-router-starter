@@ -14,6 +14,6 @@ module Styles = {
 @react.component
 let make = () => {
   <footer className=Styles.container>
-    <div className=Styles.copyright> {`© bloodyowl 2021`->React.string} </div>
+    <div className=Styles.copyright> {`© idkjs 2021`->React.string} </div>
   </footer>
 }
