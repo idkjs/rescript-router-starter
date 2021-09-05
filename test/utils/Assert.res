@@ -7,7 +7,7 @@ let elementContains = (~message=?, element: Dom.element, substring: string) =>
     ~message?,
     ~operator="elementContains",
     (textContent, substring) => {
-      textContent->String.includes(substring)
+      textContent->ReScriptJs__Js.String.includes(substring)
     },
     element->textContent,
     substring,

@@ -37,10 +37,10 @@ let fetchRobotsTxt = () =>
   // We can make the loading state more obvious by making the request a bit longer
   ->Future.flatMap(~propagateCancel=true, value => {
     Future.make(resolve => {
-      let timeoutId = setTimeout(() => {
+      let timeoutId = ReScriptJs__Js.setTimeout(() => {
         resolve(value)
       }, 1_000)
-      Some(() => clearTimeout(timeoutId))
+      Some(() => ReScriptJs__Js.clearTimeout(timeoutId))
     })
   })
 

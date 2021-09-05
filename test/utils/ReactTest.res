@@ -1,7 +1,7 @@
 open Test
 
 @send external remove: Dom.element => unit = "remove"
-
+let document = ReScriptJs__Js.document;
 let createContainer = () => {
   let containerElement: Dom.element = document["createElement"](. "div")
   let _ = document["body"]["appendChild"](. containerElement)

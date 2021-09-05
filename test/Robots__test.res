@@ -14,7 +14,7 @@ testWithReact("Robots renders", container => {
         ok: true,
         status: 200,
         response: Some("My mock response"),
-        xhr: Request.asXhr(Object.empty()),
+        xhr: Request.asXhr(ReScriptJs__Js.Object.empty()),
       }),
     )
   )

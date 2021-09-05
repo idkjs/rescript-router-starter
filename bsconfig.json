@@ -22,7 +22,6 @@
   ],
   "suffix": ".mjs",
   "bs-dependencies": [
-    "bs-stdlib-shims",
     "@rescript/react",
     "rescript-future",
     "rescript-request",

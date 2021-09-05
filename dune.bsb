@@ -1,0 +1,1467 @@
+;;;;{BSB GENERATED: NO EDIT
+(subdir ./node_modules/@rescript/react/src
+(dirs :standard legacy)
+(rule
+(targets  React.ast)
+ (deps (:inputs  React.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  React.cmj React.cmi React.cmt React.mjs)
+ (mode (promote (until-clean) (only React.mjs)))(deps (:inputs  React.ast)  (:ast_deps .././src/React.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o React.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOM.ast)
+ (deps (:inputs  ReactDOM.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOM.cmj ReactDOM.cmi ReactDOM.cmt ReactDOM.mjs)
+ (mode (promote (until-clean) (only ReactDOM.mjs)))(deps (:inputs  ReactDOM.ast)  (:ast_deps .././src/ReactDOM.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o ReactDOM.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.ast)
+ (deps (:inputs  ReactEvent.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.iast)
+ (deps (:inputs  ReactEvent.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.cmi ReactEvent.cmti)
+ (deps (:inputs  ReactEvent.iast)  (:ast_deps .././src/ReactEvent.ast .././src/ReactEvent.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o ReactEvent.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactEvent.cmj ReactEvent.cmt ReactEvent.mjs)
+ (mode (promote (until-clean) (only ReactEvent.mjs)))(deps (:inputs  ReactEvent.ast)  ReactEvent.cmi (:ast_deps .././src/ReactEvent.ast .././src/ReactEvent.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o ReactEvent.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMStyle.ast)
+ (deps (:inputs  ReactDOMStyle.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMStyle.cmj ReactDOMStyle.cmi ReactDOMStyle.cmt ReactDOMStyle.mjs)
+ (mode (promote (until-clean) (only ReactDOMStyle.mjs)))(deps (:inputs  ReactDOMStyle.ast)  (:ast_deps .././src/ReactDOMStyle.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o ReactDOMStyle.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServer.ast)
+ (deps (:inputs  ReactDOMServer.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMServer.cmj ReactDOMServer.cmi ReactDOMServer.cmt ReactDOMServer.mjs)
+ (mode (promote (until-clean) (only ReactDOMServer.mjs)))(deps (:inputs  ReactDOMServer.ast)  (:ast_deps .././src/ReactDOMServer.ast ) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o ReactDOMServer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.ast)
+ (deps (:inputs  ReactTestUtils.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.iast)
+ (deps (:inputs  ReactTestUtils.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.cmi ReactTestUtils.cmti)
+ (deps (:inputs  ReactTestUtils.iast)  (:ast_deps .././src/ReactTestUtils.ast .././src/ReactTestUtils.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o ReactTestUtils.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTestUtils.cmj ReactTestUtils.cmt ReactTestUtils.mjs)
+ (mode (promote (until-clean) (only ReactTestUtils.mjs)))(deps (:inputs  ReactTestUtils.ast)  ReactTestUtils.cmi (:ast_deps .././src/ReactTestUtils.ast .././src/ReactTestUtils.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o ReactTestUtils.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.ast)
+ (deps (:inputs  RescriptReactRouter.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.iast)
+ (deps (:inputs  RescriptReactRouter.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.cmi RescriptReactRouter.cmti)
+ (deps (:inputs  RescriptReactRouter.iast)  (:ast_deps .././src/RescriptReactRouter.ast .././src/RescriptReactRouter.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o RescriptReactRouter.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactRouter.cmj RescriptReactRouter.cmt RescriptReactRouter.mjs)
+ (mode (promote (until-clean) (only RescriptReactRouter.mjs)))(deps (:inputs  RescriptReactRouter.ast)  RescriptReactRouter.cmi (:ast_deps .././src/RescriptReactRouter.ast .././src/RescriptReactRouter.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o RescriptReactRouter.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.ast)
+ (deps (:inputs  RescriptReactErrorBoundary.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.iast)
+ (deps (:inputs  RescriptReactErrorBoundary.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.cmi RescriptReactErrorBoundary.cmti)
+ (deps (:inputs  RescriptReactErrorBoundary.iast)  (:ast_deps .././src/RescriptReactErrorBoundary.ast .././src/RescriptReactErrorBoundary.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -I ./legacy -I .    -w a -o RescriptReactErrorBoundary.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  RescriptReactErrorBoundary.cmj RescriptReactErrorBoundary.cmt RescriptReactErrorBoundary.mjs)
+ (mode (promote (until-clean) (only RescriptReactErrorBoundary.mjs)))(deps (:inputs  RescriptReactErrorBoundary.ast)  RescriptReactErrorBoundary.cmi (:ast_deps .././src/RescriptReactErrorBoundary.ast .././src/RescriptReactErrorBoundary.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./legacy -I .    -w a -bs-package-name @rescript/react -bs-package-output es6:./src:.mjs -o RescriptReactErrorBoundary.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  RescriptReactErrorBoundary.mjs RescriptReactRouter.mjs ReactTestUtils.mjs ReactDOMServer.mjs ReactDOMStyle.mjs ReactEvent.mjs ReactDOM.mjs React.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/@rescript/react/src/legacy
+(rule
+(targets  ReactDOMRe.ast)
+ (deps (:inputs  ReactDOMRe.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactDOMRe.cmj ReactDOMRe.cmi ReactDOMRe.cmt ReactDOMRe.mjs)
+ (mode (promote (until-clean) (only ReactDOMRe.mjs)))(deps (:inputs  ReactDOMRe.ast)  (:ast_deps ../.././src/legacy/ReactDOMRe.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src/legacy %{ast_deps}) (run bsc -I . -I ..    -w a -bs-package-name @rescript/react -bs-package-output es6:./src/legacy:.mjs -o ReactDOMRe.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.ast)
+ (deps (:inputs  ReasonReact.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReasonReact.cmj ReasonReact.cmi ReasonReact.cmt ReasonReact.mjs)
+ (mode (promote (until-clean) (only ReasonReact.mjs)))(deps (:inputs  ReasonReact.ast)  (:ast_deps ../.././src/legacy/ReasonReact.ast ) ../../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@rescript/react -cwd ./src/legacy %{ast_deps}) (run bsc -I . -I ..    -w a -bs-package-name @rescript/react -bs-package-output es6:./src/legacy:.mjs -o ReasonReact.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReasonReact.mjs ReactDOMRe.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/@rescript/react(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/@rescript/react/.melange.eobjs)
+
+(subdir ./node_modules/rescript-future/src
+(rule
+(targets  Future.ast)
+ (deps (:inputs  Future.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Future.iast)
+ (deps (:inputs  Future.resi) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Future.cmi Future.cmti)
+ (deps (:inputs  Future.iast)  (:ast_deps .././src/Future.ast .././src/Future.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-future -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Future.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Future.cmj Future.cmt Future.mjs)
+ (mode (promote (until-clean) (only Future.mjs)))(deps (:inputs  Future.ast)  Future.cmi (:ast_deps .././src/Future.ast .././src/Future.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-future -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name rescript-future -bs-package-output es6:./src:.mjs -o Future.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Deferred.ast)
+ (deps (:inputs  Deferred.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Deferred.iast)
+ (deps (:inputs  Deferred.resi) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Deferred.cmi Deferred.cmti)
+ (deps (:inputs  Deferred.iast)  (:ast_deps .././src/Deferred.ast .././src/Deferred.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-future -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Deferred.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Deferred.cmj Deferred.cmt Deferred.mjs)
+ (mode (promote (until-clean) (only Deferred.mjs)))(deps (:inputs  Deferred.ast)  Deferred.cmi (:ast_deps .././src/Deferred.ast .././src/Deferred.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-future -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name rescript-future -bs-package-output es6:./src:.mjs -o Deferred.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FuturePromise.ast)
+ (deps (:inputs  FuturePromise.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FuturePromise.iast)
+ (deps (:inputs  FuturePromise.resi) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FuturePromise.cmi FuturePromise.cmti)
+ (deps (:inputs  FuturePromise.iast)  (:ast_deps .././src/FuturePromise.ast .././src/FuturePromise.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-future -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o FuturePromise.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FuturePromise.cmj FuturePromise.cmt FuturePromise.mjs)
+ (mode (promote (until-clean) (only FuturePromise.mjs)))(deps (:inputs  FuturePromise.ast)  FuturePromise.cmi (:ast_deps .././src/FuturePromise.ast .././src/FuturePromise.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-future -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name rescript-future -bs-package-output es6:./src:.mjs -o FuturePromise.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  FuturePromise.mjs Deferred.mjs Future.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/rescript-future(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/rescript-future/.melange.eobjs)
+
+(subdir ./node_modules/rescript-request/src
+(rule
+(targets  Request.ast)
+ (deps (:inputs  Request.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Request.iast)
+ (deps (:inputs  Request.resi) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Request.cmi Request.cmti)
+ (deps (:inputs  Request.iast)  (:ast_deps .././src/Request.ast .././src/Request.iast) ../bsconfig.json(alias ../../rescript-future/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-request -cwd ./src %{ast_deps}) (run bsc -I . -I ../../rescript-future/src   -w a -o Request.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Request.cmj Request.cmt Request.mjs)
+ (mode (promote (until-clean) (only Request.mjs)))(deps (:inputs  Request.ast)  Request.cmi (:ast_deps .././src/Request.ast .././src/Request.iast) ../bsconfig.json(alias ../../rescript-future/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-request -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../../rescript-future/src   -w a -bs-package-name rescript-request -bs-package-output es6:./src:.mjs -o Request.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Request.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/rescript-request(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/rescript-request/.melange.eobjs)
+
+(subdir ./node_modules/rescript-asyncdata/src
+(rule
+(targets  AsyncData.ast)
+ (deps (:inputs  AsyncData.res) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  AsyncData.iast)
+ (deps (:inputs  AsyncData.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  AsyncData.cmi AsyncData.cmti)
+ (deps (:inputs  AsyncData.iast)  (:ast_deps .././src/AsyncData.ast .././src/AsyncData.iast) ../bsconfig.json(alias ../../@rescript/react/src/bsb_world)(alias ../../@rescript/react/src/legacy/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-asyncdata -cwd ./src %{ast_deps}) (run bsc -I . -I ../../@rescript/react/src -I ../../@rescript/react/src/legacy   -w a -o AsyncData.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  AsyncData.cmj AsyncData.cmt AsyncData.mjs)
+ (mode (promote (until-clean) (only AsyncData.mjs)))(deps (:inputs  AsyncData.ast)  AsyncData.cmi (:ast_deps .././src/AsyncData.ast .././src/AsyncData.iast) ../bsconfig.json(alias ../../@rescript/react/src/bsb_world)(alias ../../@rescript/react/src/legacy/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-asyncdata -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../../@rescript/react/src -I ../../@rescript/react/src/legacy   -w a -bs-package-name rescript-asyncdata -bs-package-output es6:./src:.mjs -o AsyncData.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  AsyncData.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/rescript-asyncdata(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/rescript-asyncdata/.melange.eobjs)
+
+(subdir ./node_modules/@ryyppy/rescript-promise/src
+(rule
+(targets  Promise.ast)
+ (deps (:inputs  Promise.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Promise.iast)
+ (deps (:inputs  Promise.resi) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Promise.cmi Promise.cmti)
+ (deps (:inputs  Promise.iast)  (:ast_deps .././src/Promise.ast .././src/Promise.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@ryyppy/rescript-promise -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Promise.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Promise.cmj Promise.cmt Promise.mjs)
+ (mode (promote (until-clean) (only Promise.mjs)))(deps (:inputs  Promise.ast)  Promise.cmi (:ast_deps .././src/Promise.ast .././src/Promise.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/@ryyppy/rescript-promise -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name @ryyppy/rescript-promise -bs-package-output es6:./src:.mjs -o Promise.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Promise.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/@ryyppy/rescript-promise(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/@ryyppy/rescript-promise/.melange.eobjs)
+
+(subdir ./node_modules/rescript-js/src
+(dirs :standard intl typed-arrays)
+(rule
+(targets  Js__Int.ast)
+ (deps (:inputs  Js__Int.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Int.cmj Js__Int.cmi Js__Int.cmt Js__Int.mjs)
+ (mode (promote (until-clean) (only Js__Int.mjs)))(deps (:inputs  Js__Int.ast)  (:ast_deps .././src/Js__Int.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Int.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Map.ast)
+ (deps (:inputs  Js__Map.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Map.cmj Js__Map.cmi Js__Map.cmt Js__Map.mjs)
+ (mode (promote (until-clean) (only Js__Map.mjs)))(deps (:inputs  Js__Map.ast)  (:ast_deps .././src/Js__Map.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Map.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Set.ast)
+ (deps (:inputs  Js__Set.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Set.cmj Js__Set.cmi Js__Set.cmt Js__Set.mjs)
+ (mode (promote (until-clean) (only Js__Set.mjs)))(deps (:inputs  Js__Set.ast)  (:ast_deps .././src/Js__Set.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Set.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Date.ast)
+ (deps (:inputs  Js__Date.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Date.cmj Js__Date.cmi Js__Date.cmt Js__Date.mjs)
+ (mode (promote (until-clean) (only Js__Date.mjs)))(deps (:inputs  Js__Date.ast)  (:ast_deps .././src/Js__Date.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Date.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Dict.ast)
+ (deps (:inputs  Js__Dict.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Dict.cmj Js__Dict.cmi Js__Dict.cmt Js__Dict.mjs)
+ (mode (promote (until-clean) (only Js__Dict.mjs)))(deps (:inputs  Js__Dict.ast)  (:ast_deps .././src/Js__Dict.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Dict.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl.ast)
+ (deps (:inputs  Js__Intl.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl.cmj Js__Intl.cmi Js__Intl.cmt Js__Intl.mjs)
+ (mode (promote (until-clean) (only Js__Intl.mjs)))(deps (:inputs  Js__Intl.ast)  (:ast_deps .././src/Js__Intl.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Intl.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__JSON.ast)
+ (deps (:inputs  Js__JSON.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__JSON.cmj Js__JSON.cmi Js__JSON.cmt Js__JSON.mjs)
+ (mode (promote (until-clean) (only Js__JSON.mjs)))(deps (:inputs  Js__JSON.ast)  (:ast_deps .././src/Js__JSON.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__JSON.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Math.ast)
+ (deps (:inputs  Js__Math.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Math.cmj Js__Math.cmi Js__Math.cmt Js__Math.mjs)
+ (mode (promote (until-clean) (only Js__Math.mjs)))(deps (:inputs  Js__Math.ast)  (:ast_deps .././src/Js__Math.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Math.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Null.ast)
+ (deps (:inputs  Js__Null.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Null.cmj Js__Null.cmi Js__Null.cmt Js__Null.mjs)
+ (mode (promote (until-clean) (only Js__Null.mjs)))(deps (:inputs  Js__Null.ast)  (:ast_deps .././src/Js__Null.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Null.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Type.ast)
+ (deps (:inputs  Js__Type.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Type.cmj Js__Type.cmi Js__Type.cmt Js__Type.mjs)
+ (mode (promote (until-clean) (only Js__Type.mjs)))(deps (:inputs  Js__Type.ast)  (:ast_deps .././src/Js__Type.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Type.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Array.ast)
+ (deps (:inputs  Js__Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Array.cmj Js__Array.cmi Js__Array.cmt Js__Array.mjs)
+ (mode (promote (until-clean) (only Js__Array.mjs)))(deps (:inputs  Js__Array.ast)  (:ast_deps .././src/Js__Array.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Error.ast)
+ (deps (:inputs  Js__Error.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Error.cmj Js__Error.cmi Js__Error.cmt Js__Error.mjs)
+ (mode (promote (until-clean) (only Js__Error.mjs)))(deps (:inputs  Js__Error.ast)  (:ast_deps .././src/Js__Error.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Error.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Float.ast)
+ (deps (:inputs  Js__Float.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Float.cmj Js__Float.cmi Js__Float.cmt Js__Float.mjs)
+ (mode (promote (until-clean) (only Js__Float.mjs)))(deps (:inputs  Js__Float.ast)  (:ast_deps .././src/Js__Float.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Float.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__BigInt.ast)
+ (deps (:inputs  Js__BigInt.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__BigInt.cmj Js__BigInt.cmi Js__BigInt.cmt Js__BigInt.mjs)
+ (mode (promote (until-clean) (only Js__BigInt.mjs)))(deps (:inputs  Js__BigInt.ast)  (:ast_deps .././src/Js__BigInt.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__BigInt.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Global.ast)
+ (deps (:inputs  Js__Global.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Global.cmj Js__Global.cmi Js__Global.cmt Js__Global.mjs)
+ (mode (promote (until-clean) (only Js__Global.mjs)))(deps (:inputs  Js__Global.ast)  (:ast_deps .././src/Js__Global.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Global.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Object.ast)
+ (deps (:inputs  Js__Object.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Object.cmj Js__Object.cmi Js__Object.cmt Js__Object.mjs)
+ (mode (promote (until-clean) (only Js__Object.mjs)))(deps (:inputs  Js__Object.ast)  (:ast_deps .././src/Js__Object.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Object.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__RegExp.ast)
+ (deps (:inputs  Js__RegExp.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__RegExp.cmj Js__RegExp.cmi Js__RegExp.cmt Js__RegExp.mjs)
+ (mode (promote (until-clean) (only Js__RegExp.mjs)))(deps (:inputs  Js__RegExp.ast)  (:ast_deps .././src/Js__RegExp.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__RegExp.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__String.ast)
+ (deps (:inputs  Js__String.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__String.cmj Js__String.cmi Js__String.cmt Js__String.mjs)
+ (mode (promote (until-clean) (only Js__String.mjs)))(deps (:inputs  Js__String.ast)  (:ast_deps .././src/Js__String.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__String.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Symbol.ast)
+ (deps (:inputs  Js__Symbol.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Symbol.cmj Js__Symbol.cmi Js__Symbol.cmt Js__Symbol.mjs)
+ (mode (promote (until-clean) (only Js__Symbol.mjs)))(deps (:inputs  Js__Symbol.ast)  (:ast_deps .././src/Js__Symbol.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Symbol.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs.ast)
+ (deps (:inputs  ReScriptJs.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs.cmj ReScriptJs.cmi ReScriptJs.cmt ReScriptJs.mjs)
+ (mode (promote (until-clean) (only ReScriptJs.mjs)))(deps (:inputs  ReScriptJs.ast)  (:ast_deps .././src/ReScriptJs.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o ReScriptJs.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Console.ast)
+ (deps (:inputs  Js__Console.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Console.cmj Js__Console.cmi Js__Console.cmt Js__Console.mjs)
+ (mode (promote (until-clean) (only Js__Console.mjs)))(deps (:inputs  Js__Console.ast)  (:ast_deps .././src/Js__Console.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Console.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__WeakMap.ast)
+ (deps (:inputs  Js__WeakMap.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__WeakMap.cmj Js__WeakMap.cmi Js__WeakMap.cmt Js__WeakMap.mjs)
+ (mode (promote (until-clean) (only Js__WeakMap.mjs)))(deps (:inputs  Js__WeakMap.ast)  (:ast_deps .././src/Js__WeakMap.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__WeakMap.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__WeakSet.ast)
+ (deps (:inputs  Js__WeakSet.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__WeakSet.cmj Js__WeakSet.cmi Js__WeakSet.cmt Js__WeakSet.mjs)
+ (mode (promote (until-clean) (only Js__WeakSet.mjs)))(deps (:inputs  Js__WeakSet.ast)  (:ast_deps .././src/Js__WeakSet.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__WeakSet.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__DataView.ast)
+ (deps (:inputs  Js__DataView.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__DataView.cmj Js__DataView.cmi Js__DataView.cmt Js__DataView.mjs)
+ (mode (promote (until-clean) (only Js__DataView.mjs)))(deps (:inputs  Js__DataView.ast)  (:ast_deps .././src/Js__DataView.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__DataView.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Iterator.ast)
+ (deps (:inputs  Js__Iterator.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Iterator.cmj Js__Iterator.cmi Js__Iterator.cmt Js__Iterator.mjs)
+ (mode (promote (until-clean) (only Js__Iterator.mjs)))(deps (:inputs  Js__Iterator.ast)  (:ast_deps .././src/Js__Iterator.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Iterator.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Nullable.ast)
+ (deps (:inputs  Js__Nullable.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Nullable.cmj Js__Nullable.cmi Js__Nullable.cmt Js__Nullable.mjs)
+ (mode (promote (until-clean) (only Js__Nullable.mjs)))(deps (:inputs  Js__Nullable.ast)  (:ast_deps .././src/Js__Nullable.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Nullable.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Undefined.ast)
+ (deps (:inputs  Js__Undefined.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Undefined.cmj Js__Undefined.cmi Js__Undefined.cmt Js__Undefined.mjs)
+ (mode (promote (until-clean) (only Js__Undefined.mjs)))(deps (:inputs  Js__Undefined.ast)  (:ast_deps .././src/Js__Undefined.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Undefined.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Serializer.ast)
+ (deps (:inputs  Js__Serializer.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Serializer.cmj Js__Serializer.cmi Js__Serializer.cmt Js__Serializer.mjs)
+ (mode (promote (until-clean) (only Js__Serializer.mjs)))(deps (:inputs  Js__Serializer.ast)  (:ast_deps .././src/Js__Serializer.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__Serializer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs__Js.ast)
+ (deps (:inputs  ReScriptJs__Js.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs__Js.cmj ReScriptJs__Js.cmi ReScriptJs__Js.cmt ReScriptJs__Js.mjs)
+ (mode (promote (until-clean) (only ReScriptJs__Js.mjs)))(deps (:inputs  ReScriptJs__Js.ast)  (:ast_deps .././src/ReScriptJs__Js.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o ReScriptJs__Js.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__ArrayBuffer.ast)
+ (deps (:inputs  Js__ArrayBuffer.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__ArrayBuffer.cmj Js__ArrayBuffer.cmi Js__ArrayBuffer.cmt Js__ArrayBuffer.mjs)
+ (mode (promote (until-clean) (only Js__ArrayBuffer.mjs)))(deps (:inputs  Js__ArrayBuffer.ast)  (:ast_deps .././src/Js__ArrayBuffer.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__ArrayBuffer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__AsyncIterator.ast)
+ (deps (:inputs  Js__AsyncIterator.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__AsyncIterator.cmj Js__AsyncIterator.cmi Js__AsyncIterator.cmt Js__AsyncIterator.mjs)
+ (mode (promote (until-clean) (only Js__AsyncIterator.mjs)))(deps (:inputs  Js__AsyncIterator.ast)  (:ast_deps .././src/Js__AsyncIterator.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o Js__AsyncIterator.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs__Pervasives.ast)
+ (deps (:inputs  ReScriptJs__Pervasives.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs__Pervasives.cmj ReScriptJs__Pervasives.cmi ReScriptJs__Pervasives.cmt ReScriptJs__Pervasives.mjs)
+ (mode (promote (until-clean) (only ReScriptJs__Pervasives.mjs)))(deps (:inputs  ReScriptJs__Pervasives.ast)  (:ast_deps .././src/ReScriptJs__Pervasives.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o ReScriptJs__Pervasives.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs__JsWithPervasives.ast)
+ (deps (:inputs  ReScriptJs__JsWithPervasives.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReScriptJs__JsWithPervasives.cmj ReScriptJs__JsWithPervasives.cmi ReScriptJs__JsWithPervasives.cmt ReScriptJs__JsWithPervasives.mjs)
+ (mode (promote (until-clean) (only ReScriptJs__JsWithPervasives.mjs)))(deps (:inputs  ReScriptJs__JsWithPervasives.ast)  (:ast_deps .././src/ReScriptJs__JsWithPervasives.ast ) ../bsconfig.json(alias ../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src %{ast_deps}) (run bsc -I ./intl -I ./typed-arrays -I . -I ../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src:.mjs -o ReScriptJs__JsWithPervasives.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReScriptJs__JsWithPervasives.mjs ReScriptJs__Pervasives.mjs Js__AsyncIterator.mjs Js__ArrayBuffer.mjs ReScriptJs__Js.mjs Js__Serializer.mjs Js__Undefined.mjs Js__Nullable.mjs Js__Iterator.mjs Js__DataView.mjs Js__WeakSet.mjs Js__WeakMap.mjs Js__Console.mjs ReScriptJs.mjs Js__Symbol.mjs Js__String.mjs Js__RegExp.mjs Js__Object.mjs Js__Global.mjs Js__BigInt.mjs Js__Float.mjs Js__Error.mjs Js__Array.mjs Js__Type.mjs Js__Null.mjs Js__Math.mjs Js__JSON.mjs Js__Intl.mjs Js__Dict.mjs Js__Date.mjs Js__Set.mjs Js__Map.mjs Js__Int.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/rescript-js/src/typed-arrays
+(rule
+(targets  Js__Int8Array.ast)
+ (deps (:inputs  Js__Int8Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Int8Array.cmj Js__Int8Array.cmi Js__Int8Array.cmt Js__Int8Array.mjs)
+ (mode (promote (until-clean) (only Js__Int8Array.mjs)))(deps (:inputs  Js__Int8Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Int8Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Int8Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Int16Array.ast)
+ (deps (:inputs  Js__Int16Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Int16Array.cmj Js__Int16Array.cmi Js__Int16Array.cmt Js__Int16Array.mjs)
+ (mode (promote (until-clean) (only Js__Int16Array.mjs)))(deps (:inputs  Js__Int16Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Int16Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Int16Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Int32Array.ast)
+ (deps (:inputs  Js__Int32Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Int32Array.cmj Js__Int32Array.cmi Js__Int32Array.cmt Js__Int32Array.mjs)
+ (mode (promote (until-clean) (only Js__Int32Array.mjs)))(deps (:inputs  Js__Int32Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Int32Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Int32Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__TypedArray.ast)
+ (deps (:inputs  Js__TypedArray.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__TypedArray.cmj Js__TypedArray.cmi Js__TypedArray.cmt Js__TypedArray.mjs)
+ (mode (promote (until-clean) (only Js__TypedArray.mjs)))(deps (:inputs  Js__TypedArray.ast)  (:ast_deps ../.././src/typed-arrays/Js__TypedArray.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__TypedArray.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint8Array.ast)
+ (deps (:inputs  Js__Uint8Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint8Array.cmj Js__Uint8Array.cmi Js__Uint8Array.cmt Js__Uint8Array.mjs)
+ (mode (promote (until-clean) (only Js__Uint8Array.mjs)))(deps (:inputs  Js__Uint8Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Uint8Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Uint8Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint16Array.ast)
+ (deps (:inputs  Js__Uint16Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint16Array.cmj Js__Uint16Array.cmi Js__Uint16Array.cmt Js__Uint16Array.mjs)
+ (mode (promote (until-clean) (only Js__Uint16Array.mjs)))(deps (:inputs  Js__Uint16Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Uint16Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Uint16Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint32Array.ast)
+ (deps (:inputs  Js__Uint32Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint32Array.cmj Js__Uint32Array.cmi Js__Uint32Array.cmt Js__Uint32Array.mjs)
+ (mode (promote (until-clean) (only Js__Uint32Array.mjs)))(deps (:inputs  Js__Uint32Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Uint32Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Uint32Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Float32Array.ast)
+ (deps (:inputs  Js__Float32Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Float32Array.cmj Js__Float32Array.cmi Js__Float32Array.cmt Js__Float32Array.mjs)
+ (mode (promote (until-clean) (only Js__Float32Array.mjs)))(deps (:inputs  Js__Float32Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Float32Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Float32Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Float64Array.ast)
+ (deps (:inputs  Js__Float64Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Float64Array.cmj Js__Float64Array.cmi Js__Float64Array.cmt Js__Float64Array.mjs)
+ (mode (promote (until-clean) (only Js__Float64Array.mjs)))(deps (:inputs  Js__Float64Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__Float64Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Float64Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__BigInt64Array.ast)
+ (deps (:inputs  Js__BigInt64Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__BigInt64Array.cmj Js__BigInt64Array.cmi Js__BigInt64Array.cmt Js__BigInt64Array.mjs)
+ (mode (promote (until-clean) (only Js__BigInt64Array.mjs)))(deps (:inputs  Js__BigInt64Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__BigInt64Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__BigInt64Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__BigUint64Array.ast)
+ (deps (:inputs  Js__BigUint64Array.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__BigUint64Array.cmj Js__BigUint64Array.cmi Js__BigUint64Array.cmt Js__BigUint64Array.mjs)
+ (mode (promote (until-clean) (only Js__BigUint64Array.mjs)))(deps (:inputs  Js__BigUint64Array.ast)  (:ast_deps ../.././src/typed-arrays/Js__BigUint64Array.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__BigUint64Array.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint8ClampedArray.ast)
+ (deps (:inputs  Js__Uint8ClampedArray.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Uint8ClampedArray.cmj Js__Uint8ClampedArray.cmi Js__Uint8ClampedArray.cmt Js__Uint8ClampedArray.mjs)
+ (mode (promote (until-clean) (only Js__Uint8ClampedArray.mjs)))(deps (:inputs  Js__Uint8ClampedArray.ast)  (:ast_deps ../.././src/typed-arrays/Js__Uint8ClampedArray.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/typed-arrays %{ast_deps}) (run bsc -I ../intl -I . -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/typed-arrays:.mjs -o Js__Uint8ClampedArray.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Js__Uint8ClampedArray.mjs Js__BigUint64Array.mjs Js__BigInt64Array.mjs Js__Float64Array.mjs Js__Float32Array.mjs Js__Uint32Array.mjs Js__Uint16Array.mjs Js__Uint8Array.mjs Js__TypedArray.mjs Js__Int32Array.mjs Js__Int16Array.mjs Js__Int8Array.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./node_modules/rescript-js/src/intl
+(rule
+(targets  Js__Intl__Locale.ast)
+ (deps (:inputs  Js__Intl__Locale.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__Locale.cmj Js__Intl__Locale.cmi Js__Intl__Locale.cmt Js__Intl__Locale.mjs)
+ (mode (promote (until-clean) (only Js__Intl__Locale.mjs)))(deps (:inputs  Js__Intl__Locale.ast)  (:ast_deps ../.././src/intl/Js__Intl__Locale.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/intl %{ast_deps}) (run bsc -I . -I ../typed-arrays -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/intl:.mjs -o Js__Intl__Locale.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__Collator.ast)
+ (deps (:inputs  Js__Intl__Collator.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__Collator.cmj Js__Intl__Collator.cmi Js__Intl__Collator.cmt Js__Intl__Collator.mjs)
+ (mode (promote (until-clean) (only Js__Intl__Collator.mjs)))(deps (:inputs  Js__Intl__Collator.ast)  (:ast_deps ../.././src/intl/Js__Intl__Collator.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/intl %{ast_deps}) (run bsc -I . -I ../typed-arrays -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/intl:.mjs -o Js__Intl__Collator.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__PluralRules.ast)
+ (deps (:inputs  Js__Intl__PluralRules.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__PluralRules.cmj Js__Intl__PluralRules.cmi Js__Intl__PluralRules.cmt Js__Intl__PluralRules.mjs)
+ (mode (promote (until-clean) (only Js__Intl__PluralRules.mjs)))(deps (:inputs  Js__Intl__PluralRules.ast)  (:ast_deps ../.././src/intl/Js__Intl__PluralRules.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/intl %{ast_deps}) (run bsc -I . -I ../typed-arrays -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/intl:.mjs -o Js__Intl__PluralRules.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__NumberFormat.ast)
+ (deps (:inputs  Js__Intl__NumberFormat.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__NumberFormat.cmj Js__Intl__NumberFormat.cmi Js__Intl__NumberFormat.cmt Js__Intl__NumberFormat.mjs)
+ (mode (promote (until-clean) (only Js__Intl__NumberFormat.mjs)))(deps (:inputs  Js__Intl__NumberFormat.ast)  (:ast_deps ../.././src/intl/Js__Intl__NumberFormat.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/intl %{ast_deps}) (run bsc -I . -I ../typed-arrays -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/intl:.mjs -o Js__Intl__NumberFormat.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__DateTimeFormat.ast)
+ (deps (:inputs  Js__Intl__DateTimeFormat.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__DateTimeFormat.cmj Js__Intl__DateTimeFormat.cmi Js__Intl__DateTimeFormat.cmt Js__Intl__DateTimeFormat.mjs)
+ (mode (promote (until-clean) (only Js__Intl__DateTimeFormat.mjs)))(deps (:inputs  Js__Intl__DateTimeFormat.ast)  (:ast_deps ../.././src/intl/Js__Intl__DateTimeFormat.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/intl %{ast_deps}) (run bsc -I . -I ../typed-arrays -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/intl:.mjs -o Js__Intl__DateTimeFormat.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__RelativeTimeFormat.ast)
+ (deps (:inputs  Js__Intl__RelativeTimeFormat.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Js__Intl__RelativeTimeFormat.cmj Js__Intl__RelativeTimeFormat.cmi Js__Intl__RelativeTimeFormat.cmt Js__Intl__RelativeTimeFormat.mjs)
+ (mode (promote (until-clean) (only Js__Intl__RelativeTimeFormat.mjs)))(deps (:inputs  Js__Intl__RelativeTimeFormat.ast)  (:ast_deps ../.././src/intl/Js__Intl__RelativeTimeFormat.ast ) ../../bsconfig.json(alias ../../../@ryyppy/rescript-promise/src/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-js -cwd ./src/intl %{ast_deps}) (run bsc -I . -I ../typed-arrays -I .. -I ../../../@ryyppy/rescript-promise/src   -w a -bs-package-name rescript-js -bs-package-output es6:./src/intl:.mjs -o Js__Intl__RelativeTimeFormat.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Js__Intl__RelativeTimeFormat.mjs Js__Intl__DateTimeFormat.mjs Js__Intl__NumberFormat.mjs Js__Intl__PluralRules.mjs Js__Intl__Collator.mjs Js__Intl__Locale.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/rescript-js(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/rescript-js/.melange.eobjs)
+
+(subdir ./node_modules/rescript-test/src
+(rule
+(targets  Test.ast)
+ (deps (:inputs  Test.res) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Test.iast)
+ (deps (:inputs  Test.resi) )
+(action
+ (run bsc  -w a  -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Test.cmi Test.cmti)
+ (deps (:inputs  Test.iast)  (:ast_deps .././src/Test.ast .././src/Test.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-test -cwd ./src %{ast_deps}) (run bsc -I .    -w a -o Test.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Test.cmj Test.cmt Test.mjs)
+ (mode (promote (until-clean) (only Test.mjs)))(deps (:inputs  Test.ast)  Test.cmi (:ast_deps .././src/Test.ast .././src/Test.iast) ../bsconfig.json)
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter/node_modules/rescript-test -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I .    -w a -bs-package-name rescript-test -bs-package-output es6:./src:.mjs -o Test.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Test.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir ./node_modules/rescript-test(data_only_dirs .melange.eobjs))
+(subdir ./node_modules/rescript-test/.melange.eobjs)
+
+(subdir ./test
+(dirs :standard utils)
+(rule
+(targets  Home__test.ast)
+ (deps (:inputs  Home__test.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Home__test.cmj Home__test.cmi Home__test.cmt Home__test.mjs)
+ (mode (promote (until-clean) (only Home__test.mjs)))(deps (:inputs  Home__test.ast)  (:ast_deps .././test/Home__test.ast ) ../bsconfig.json(alias ../node_modules/rescript-test/src/bsb_world)(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -g -root /Users/mando/Github/rescript-router-starter -cwd ./test %{ast_deps}) (run bsc -I ./utils -I . -I ../src/shared -I ../src/hooks -I ../src/pages -I ../src -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl  -I ../node_modules/rescript-test/src  -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./test:.mjs -o Home__test.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Robots__test.ast)
+ (deps (:inputs  Robots__test.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Robots__test.cmj Robots__test.cmi Robots__test.cmt Robots__test.mjs)
+ (mode (promote (until-clean) (only Robots__test.mjs)))(deps (:inputs  Robots__test.ast)  (:ast_deps .././test/Robots__test.ast ) ../bsconfig.json(alias ../node_modules/rescript-test/src/bsb_world)(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -g -root /Users/mando/Github/rescript-router-starter -cwd ./test %{ast_deps}) (run bsc -I ./utils -I . -I ../src/shared -I ../src/hooks -I ../src/pages -I ../src -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl  -I ../node_modules/rescript-test/src  -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./test:.mjs -o Robots__test.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  Robots__test.mjs Home__test.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./test/utils
+(rule
+(targets  Assert.ast)
+ (deps (:inputs  Assert.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Assert.cmj Assert.cmi Assert.cmt Assert.mjs)
+ (mode (promote (until-clean) (only Assert.mjs)))(deps (:inputs  Assert.ast)  (:ast_deps ../.././test/utils/Assert.ast ) ../../bsconfig.json(alias ../../node_modules/rescript-test/src/bsb_world)(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -g -root /Users/mando/Github/rescript-router-starter -cwd ./test/utils %{ast_deps}) (run bsc -I . -I .. -I ../../src/shared -I ../../src/hooks -I ../../src/pages -I ../../src -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl  -I ../../node_modules/rescript-test/src  -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./test/utils:.mjs -o Assert.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTest.ast)
+ (deps (:inputs  ReactTest.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ReactTest.cmj ReactTest.cmi ReactTest.cmt ReactTest.mjs)
+ (mode (promote (until-clean) (only ReactTest.mjs)))(deps (:inputs  ReactTest.ast)  (:ast_deps ../.././test/utils/ReactTest.ast ) ../../bsconfig.json(alias ../../node_modules/rescript-test/src/bsb_world)(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -g -root /Users/mando/Github/rescript-router-starter -cwd ./test/utils %{ast_deps}) (run bsc -I . -I .. -I ../../src/shared -I ../../src/hooks -I ../../src/pages -I ../../src -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl  -I ../../node_modules/rescript-test/src  -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./test/utils:.mjs -o ReactTest.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ReactTest.mjs Assert.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./src
+(dirs :standard shared hooks pages)
+(rule
+(targets  App.ast)
+ (deps (:inputs  App.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  App.iast)
+ (deps (:inputs  App.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  App.cmi App.cmti)
+ (deps (:inputs  App.iast)  (:ast_deps .././src/App.ast .././src/App.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -o App.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  App.cmj App.cmt App.mjs)
+ (mode (promote (until-clean) (only App.mjs)))(deps (:inputs  App.ast)  App.cmi (:ast_deps .././src/App.ast .././src/App.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src:.mjs -o App.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Home.ast)
+ (deps (:inputs  Home.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Home.iast)
+ (deps (:inputs  Home.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Home.cmi Home.cmti)
+ (deps (:inputs  Home.iast)  (:ast_deps .././src/Home.ast .././src/Home.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -o Home.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Home.cmj Home.cmt Home.mjs)
+ (mode (promote (until-clean) (only Home.mjs)))(deps (:inputs  Home.ast)  Home.cmi (:ast_deps .././src/Home.ast .././src/Home.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src:.mjs -o Home.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Footer.ast)
+ (deps (:inputs  Footer.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Footer.iast)
+ (deps (:inputs  Footer.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Footer.cmi Footer.cmti)
+ (deps (:inputs  Footer.iast)  (:ast_deps .././src/Footer.ast .././src/Footer.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -o Footer.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Footer.cmj Footer.cmt Footer.mjs)
+ (mode (promote (until-clean) (only Footer.mjs)))(deps (:inputs  Footer.ast)  Footer.cmi (:ast_deps .././src/Footer.ast .././src/Footer.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src:.mjs -o Footer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Header.ast)
+ (deps (:inputs  Header.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Header.iast)
+ (deps (:inputs  Header.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Header.cmi Header.cmti)
+ (deps (:inputs  Header.iast)  (:ast_deps .././src/Header.ast .././src/Header.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -o Header.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Header.cmj Header.cmt Header.mjs)
+ (mode (promote (until-clean) (only Header.mjs)))(deps (:inputs  Header.ast)  Header.cmi (:ast_deps .././src/Header.ast .././src/Header.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src:.mjs -o Header.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Robots.ast)
+ (deps (:inputs  Robots.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Robots.iast)
+ (deps (:inputs  Robots.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Robots.cmi Robots.cmti)
+ (deps (:inputs  Robots.iast)  (:ast_deps .././src/Robots.ast .././src/Robots.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -o Robots.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Robots.cmj Robots.cmt Robots.mjs)
+ (mode (promote (until-clean) (only Robots.mjs)))(deps (:inputs  Robots.ast)  Robots.cmi (:ast_deps .././src/Robots.ast .././src/Robots.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src:.mjs -o Robots.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ErrorPage.ast)
+ (deps (:inputs  ErrorPage.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ErrorPage.iast)
+ (deps (:inputs  ErrorPage.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ErrorPage.cmi ErrorPage.cmti)
+ (deps (:inputs  ErrorPage.iast)  (:ast_deps .././src/ErrorPage.ast .././src/ErrorPage.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -o ErrorPage.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  ErrorPage.cmj ErrorPage.cmt ErrorPage.mjs)
+ (mode (promote (until-clean) (only ErrorPage.mjs)))(deps (:inputs  ErrorPage.ast)  ErrorPage.cmi (:ast_deps .././src/ErrorPage.ast .././src/ErrorPage.iast) ../bsconfig.json(alias ../node_modules/@rescript/react/src/bsb_world)(alias ../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../node_modules/rescript-future/src/bsb_world)(alias ../node_modules/rescript-request/src/bsb_world)(alias ../node_modules/rescript-asyncdata/src/bsb_world)(alias ../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../node_modules/rescript-js/src/bsb_world)(alias ../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src %{ast_deps}) (run bsc -bs-read-cmi -I ./shared -I ./hooks -I ./pages -I . -I ../node_modules/@rescript/react/src -I ../node_modules/@rescript/react/src/legacy -I ../node_modules/rescript-future/src -I ../node_modules/rescript-request/src -I ../node_modules/rescript-asyncdata/src -I ../node_modules/@ryyppy/rescript-promise/src -I ../node_modules/rescript-js/src -I ../node_modules/rescript-js/src/typed-arrays -I ../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src:.mjs -o ErrorPage.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  ErrorPage.mjs Robots.mjs Header.mjs Footer.mjs Home.mjs App.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./src/pages
+(rule
+(targets  Form.ast)
+ (deps (:inputs  Form.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Form.cmj Form.cmi Form.cmt Form.mjs)
+ (mode (promote (until-clean) (only Form.mjs)))(deps (:inputs  Form.ast)  (:ast_deps ../.././src/pages/Form.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/pages %{ast_deps}) (run bsc -bs-re-out -I ../shared -I ../hooks -I . -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/pages:.mjs -o Form.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Main.ast)
+ (deps (:inputs  Main.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Main.cmj Main.cmi Main.cmt Main.mjs)
+ (mode (promote (until-clean) (only Main.mjs)))(deps (:inputs  Main.ast)  (:ast_deps ../.././src/pages/Main.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/pages %{ast_deps}) (run bsc -bs-re-out -I ../shared -I ../hooks -I . -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/pages:.mjs -o Main.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  NotFound.ast)
+ (deps (:inputs  NotFound.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  NotFound.cmj NotFound.cmi NotFound.cmt NotFound.mjs)
+ (mode (promote (until-clean) (only NotFound.mjs)))(deps (:inputs  NotFound.ast)  (:ast_deps ../.././src/pages/NotFound.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/pages %{ast_deps}) (run bsc -bs-re-out -I ../shared -I ../hooks -I . -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/pages:.mjs -o NotFound.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  NotFound.mjs Main.mjs Form.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./src/hooks
+(rule
+(targets  UseForm.ast)
+ (deps (:inputs  UseForm.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  UseForm.cmj UseForm.cmi UseForm.cmt UseForm.mjs)
+ (mode (promote (until-clean) (only UseForm.mjs)))(deps (:inputs  UseForm.ast)  (:ast_deps ../.././src/hooks/UseForm.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/hooks %{ast_deps}) (run bsc -bs-re-out -I ../shared -I . -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/hooks:.mjs -o UseForm.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  UseForm.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+(subdir ./src/shared
+(rule
+(targets  Head.ast)
+ (deps (:inputs  Head.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Head.iast)
+ (deps (:inputs  Head.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Head.cmi Head.cmti)
+ (deps (:inputs  Head.iast)  (:ast_deps ../.././src/shared/Head.ast ../.././src/shared/Head.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -o Head.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Head.cmj Head.cmt Head.mjs)
+ (mode (promote (until-clean) (only Head.mjs)))(deps (:inputs  Head.ast)  Head.cmi (:ast_deps ../.././src/shared/Head.ast ../.././src/shared/Head.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o Head.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Link.ast)
+ (deps (:inputs  Link.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Link.iast)
+ (deps (:inputs  Link.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Link.cmi Link.cmti)
+ (deps (:inputs  Link.iast)  (:ast_deps ../.././src/shared/Link.ast ../.././src/shared/Link.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -o Link.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Link.cmj Link.cmt Link.mjs)
+ (mode (promote (until-clean) (only Link.mjs)))(deps (:inputs  Link.ast)  Link.cmi (:ast_deps ../.././src/shared/Link.ast ../.././src/shared/Link.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o Link.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Router.ast)
+ (deps (:inputs  Router.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Router.iast)
+ (deps (:inputs  Router.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Router.cmi Router.cmti)
+ (deps (:inputs  Router.iast)  (:ast_deps ../.././src/shared/Router.ast ../.././src/shared/Router.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -o Router.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Router.cmj Router.cmt Router.mjs)
+ (mode (promote (until-clean) (only Router.mjs)))(deps (:inputs  Router.ast)  Router.cmi (:ast_deps ../.././src/shared/Router.ast ../.././src/shared/Router.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o Router.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Spacer.ast)
+ (deps (:inputs  Spacer.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Spacer.iast)
+ (deps (:inputs  Spacer.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Spacer.cmi Spacer.cmti)
+ (deps (:inputs  Spacer.iast)  (:ast_deps ../.././src/shared/Spacer.ast ../.././src/shared/Spacer.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -o Spacer.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Spacer.cmj Spacer.cmt Spacer.mjs)
+ (mode (promote (until-clean) (only Spacer.mjs)))(deps (:inputs  Spacer.ast)  Spacer.cmi (:ast_deps ../.././src/shared/Spacer.ast ../.././src/shared/Spacer.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o Spacer.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Styles.ast)
+ (deps (:inputs  Styles.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Styles.cmj Styles.cmi Styles.cmt Styles.mjs)
+ (mode (promote (until-clean) (only Styles.mjs)))(deps (:inputs  Styles.ast)  (:ast_deps ../.././src/shared/Styles.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o Styles.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Emotion.ast)
+ (deps (:inputs  Emotion.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  Emotion.cmj Emotion.cmi Emotion.cmt Emotion.mjs)
+ (mode (promote (until-clean) (only Emotion.mjs)))(deps (:inputs  Emotion.ast)  (:ast_deps ../.././src/shared/Emotion.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o Emotion.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CssReset.ast)
+ (deps (:inputs  CssReset.res) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CssReset.iast)
+ (deps (:inputs  CssReset.resi) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CssReset.cmi CssReset.cmti)
+ (deps (:inputs  CssReset.iast)  (:ast_deps ../.././src/shared/CssReset.ast ../.././src/shared/CssReset.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -o CssReset.cmi %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  CssReset.cmj CssReset.cmt CssReset.mjs)
+ (mode (promote (until-clean) (only CssReset.mjs)))(deps (:inputs  CssReset.ast)  CssReset.cmi (:ast_deps ../.././src/shared/CssReset.ast ../.././src/shared/CssReset.iast) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-read-cmi -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o CssReset.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FormTypes.ast)
+ (deps (:inputs  FormTypes.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  FormTypes.cmj FormTypes.cmi FormTypes.cmt FormTypes.mjs)
+ (mode (promote (until-clean) (only FormTypes.mjs)))(deps (:inputs  FormTypes.ast)  (:ast_deps ../.././src/shared/FormTypes.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-re-out -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o FormTypes.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  MainLayout.ast)
+ (deps (:inputs  MainLayout.re) )
+(action
+ (run bsc  -w a -bs-jsx 3 -open Belt -open ReScriptJs__Js -absname -bs-ast -o %{targets} %{inputs}))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ (rule
+(targets  MainLayout.cmj MainLayout.cmi MainLayout.cmt MainLayout.mjs)
+ (mode (promote (until-clean) (only MainLayout.mjs)))(deps (:inputs  MainLayout.ast)  (:ast_deps ../.././src/shared/MainLayout.ast ) ../../bsconfig.json(alias ../../node_modules/@rescript/react/src/bsb_world)(alias ../../node_modules/@rescript/react/src/legacy/bsb_world)(alias ../../node_modules/rescript-future/src/bsb_world)(alias ../../node_modules/rescript-request/src/bsb_world)(alias ../../node_modules/rescript-asyncdata/src/bsb_world)(alias ../../node_modules/@ryyppy/rescript-promise/src/bsb_world)(alias ../../node_modules/rescript-js/src/bsb_world)(alias ../../node_modules/rescript-js/src/typed-arrays/bsb_world)(alias ../../node_modules/rescript-js/src/intl/bsb_world))
+(action
+ (progn (dynamic-run bsb_helper -root /Users/mando/Github/rescript-router-starter -cwd ./src/shared %{ast_deps}) (run bsc -bs-re-out -I . -I ../hooks -I ../pages -I .. -I ../../node_modules/@rescript/react/src -I ../../node_modules/@rescript/react/src/legacy -I ../../node_modules/rescript-future/src -I ../../node_modules/rescript-request/src -I ../../node_modules/rescript-asyncdata/src -I ../../node_modules/@ryyppy/rescript-promise/src -I ../../node_modules/rescript-js/src -I ../../node_modules/rescript-js/src/typed-arrays -I ../../node_modules/rescript-js/src/intl   -w a -bs-package-name rescript-react-starter-kit -bs-package-output es6:./src/shared:.mjs -o MainLayout.cmj %{inputs})))
+(enabled_if (= %{ocaml_version} "4.12.0")) )
+ 
+(alias (name bsb_world)(deps  MainLayout.mjs FormTypes.mjs CssReset.mjs Emotion.mjs Styles.mjs Spacer.mjs Router.mjs Link.mjs Head.mjs)
+(enabled_if (= %{ocaml_version} "4.12.0"))))
+
+
+(subdir .melange.eobjs)
+
+(data_only_dirs node_modules .melange.eobjs)
+(alias (name bsb_world))
+;;;;BSB GENERATED: NO EDIT}

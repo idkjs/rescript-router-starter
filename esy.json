@@ -1,0 +1,20 @@
+{
+  "name": "counter-as-a-service",
+  "dependencies": {
+    "ocaml": "4.12.x",
+    "melange": "melange-re/melange"
+  },
+  "devDependencies": {
+    "ocaml": "4.12.x",
+    "@opam/ocaml-lsp-server": "ocaml/ocaml-lsp:ocaml-lsp-server.opam"
+  },
+  "esy": {
+    "buildsInSource": "unsafe",
+    "build": [
+      "ln -sfn #{melange.install} node_modules/bs-platform"
+    ]
+  },
+  "installConfig": {
+    "pnp": false
+  }
+}

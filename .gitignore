@@ -7,3 +7,6 @@ lib/
 build/
 src/**/*.mjs
 test/**/*.mjs
+_esy
+_build
+.melange.eobjs

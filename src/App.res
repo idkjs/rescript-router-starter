@@ -18,14 +18,14 @@ body {
   flex-direction: column;
   flex-grow: 1
 }`)
-
+open ReScriptJs__Js
 module App = {
   @react.component
   let make = () => {
     let url = Router.useUrl()
 
     React.useEffect1(() => {
-      let () = window["scrollTo"](. 0, 0)
+      let () = ReScriptJs__Js.window["scrollTo"](. 0, 0)
       None
     }, [url.path])
 
@@ -33,12 +33,6 @@ module App = {
       <Head
         defaultTitle="ReScript Form" titleTemplate="%s - ReScript Form"
       />
-      // <Header />
-      // {switch url.path {
-      // | list{} => <Home />
-      // | list{"robots"} => <Robots />
-      // | _ => <ErrorPage text="Not found" />
-      // }}
         <MainLayout>
       {switch (url.path) {
        | list{"login"} => <Form formType=FormTypes.Login />

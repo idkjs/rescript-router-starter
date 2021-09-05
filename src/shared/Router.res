@@ -1,6 +1,6 @@
 @val external publicPath: option<string> = "process.env.PUBLIC_PATH"
 
-let publicPath = publicPath->Option.getWithDefault("/")
+let publicPath = publicPath->Belt.Option.getWithDefault("/")
 
 let join = (s1, s2) =>
   `${s1}/${s2}`
@@ -38,7 +38,7 @@ let pathParse = str =>
     raw
     |> Js.String.split("/")
     |> Js.Array.filter(item => String.length(item) != 0)
-    |> List.fromArray
+    |> Belt.List.fromArray
   }
 
 type url = RescriptReactRouter.url

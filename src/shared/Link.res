@@ -11,10 +11,10 @@ let make = (
   ~children,
 ) => {
   let url = Router.useUrl()
-  let path = url.path->List.reduce("", (acc, item) => acc ++ "/" ++ item)
-  let compareHref = matchHref->Option.getWithDefault(href)
+  let path = url.path->Belt.List.reduce("", (acc, item) => acc ++ "/" ++ item)
+  let compareHref = matchHref->Belt.Option.getWithDefault(href)
   let isActive = matchSubroutes
-    ? (path ++ "/")->String.startsWith(compareHref) || path->String.startsWith(compareHref)
+    ? (path ++ "/")->ReScriptJs__Js.String.startsWith(compareHref) || path->ReScriptJs__Js.String.startsWith(compareHref)
     : path === compareHref || path ++ "/" === compareHref
   let actualHref = Router.makeHref(href)
   <a
